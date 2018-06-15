@@ -121,7 +121,6 @@ $(".submit").click(function() {
   checkAnswers();
 });
 
-
 /*HOW WE GONNA CHECK DEM ANSWERS?!?*/
 function checkAnswers() {
   /*$("#myForm input[type=radio]").each(function() {
