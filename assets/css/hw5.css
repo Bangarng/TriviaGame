@@ -12,11 +12,15 @@ main {
     font-size: 1em;
 }
 
+main h1 {
+    line-height: 25px;
+}
+
 .header {
     background: url(../images/btmheader.gif);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 92%;
+    width: 90%;
     height: 300px;
     display: block;
     border-radius: 10px;
@@ -45,12 +49,17 @@ header h1 {
     text-align: center;
     font-family: 'Krona One', sans-serif;
     font-size: 3em;
-    background-color: #8a8a8a;
+    background-color: #ccc;
     width: 100px;
     height: 65px;
-    border-radius: 3px;
+    border-radius: 5px;
     line-height: 65px;
     margin: 20px auto -50px auto;
+}
+
+.answerHead, .results {
+    display:none;
+    font-size:1.8em;
 }
 
 .submit {
@@ -62,26 +71,42 @@ header h1 {
     border-radius: 15px;
     margin-top: 35px;
     transition: all .2s ease-in-out;
+    box-shadow: 5px 5px #ccc;
 }
 
 .submit:hover {
     transform: scale(1.05);
 }
 
-
-
 .questionaire h1 {
     font-family: 'Krona One', sans-serif;
     text-align: center;
-    font-size: 2em;
-    color: #f8c719;
-    text-shadow: 3px 3px black;
+    font-size: 1.5em;
+    color: black;
+    text-shadow: 2px 2px #f8c719;
     padding: 50px 0 15px 0;
 }
 
 .questionaire div {
     display:inline;
     padding-right:15px;
+}
+
+table {
+    background-color: #ccc;
+    width: 40% !important;
+    padding-top: 20px;
+    border-radius: 8px;
+}
+
+thead th {
+    padding-top: 8px !important;
+    width: 53%;
+}
+
+thead th, .right, .wrong {
+    padding: 0 20px 10px 0;
+    text-align: center;
 }
 
 /******************************************************************/

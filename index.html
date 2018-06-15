@@ -29,11 +29,27 @@
         <h1>TRIVIA</h1>
     </header>   
     <main class="container content">
-        <h1><u>Answer the questions before time runs out!</u></h1>
+        <h1 class="instructions"><u>Answer the questions before time runs out!</u><br>
+        If you've never heard of BTM, you can learn (and find all the answers) at <br> <a href="http://boloneytimemachine.com" target="_blank">Boloney Time Machine's website here.</a></h1>
+        <h1 class="answerHead"><u>Results!</u></h1>       
         <div id="show-number"></div>
         </br>
         <section>
         <form class="questionaire"></form>
+        <div class="results">
+            <table class="container">
+                <thead>
+                    <th><u>Correct</u></th>
+                    <th><u>Incorrect</u></th>
+                </thead>
+                <tbody>
+                    <tr>    
+                        <td class="right">Right</td>
+                        <td class="wrong">Wrong</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         </section>
         <section>
@@ -43,7 +59,7 @@
 
     <!-- jQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!--===============================Homework 4 JS FILE================================================-->
+    <!--===============================Homework 5 JS FILE================================================-->
     <script type="text/javascript" src="assets/javascript/hw5script.js"></script>
 
   </body>

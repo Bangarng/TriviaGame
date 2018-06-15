@@ -1,3 +1,6 @@
+var right = 0;
+var wrong = 0;
+
 var BTMTrivia = {
   question1: {
     header: "What does BTM stand for?",
@@ -88,8 +91,10 @@ function decrement() {
     //  ...run the stop function.
     stop();
     //  Alert the user that time is up.
-    alert("Time Up!");
-    checkAnswers();
+    var result = confirm("Time Up! Let's see how you did.");
+      if (result) {
+       checkAnswers();
+      }
   }
 }
 //  The stop function
@@ -100,36 +105,45 @@ function stop() {
 function TrivaQuestions(object) {
   for (var p in object) {
     if(object.hasOwnProperty(p)) {
-      console.log(object[p].header);
-      console.log(object[p].answer1);
       var questionH1 = $("<h1 class='question'>" + object[p].header + "</h1>");
       $(".questionaire").append(questionH1);
-      var answer1 = $("<div><input type='radio' value=" + object[p].answer1 + ">" + object[p].answer1 + "</div>");
+      var answer1 = $("<div><input type='radio' data-answer=false value=" + object[p].answer1 + ">" + object[p].answer1 + "</div>");
       $(".questionaire").append(answer1);
-      var answer2 = $("<div><input type='radio' value=" + object[p].answer2 + ">" + object[p].answer2 + "</div>");
+      var answer2 = $("<div><input type='radio' data-answer=false value=" + object[p].answer2 + ">" + object[p].answer2 + "</div>");
       $(".questionaire").append(answer2);
-      var correctAnswer = $("<div><input type='radio' value=" + object[p].correctAnswer + ">" + object[p].correctAnswer + "</div>");
+      var correctAnswer = $("<div><input type='radio' data-answer='true' value=" + object[p].correctAnswer + ">" + object[p].correctAnswer + "</div>");
       $(".questionaire").append(correctAnswer);
-      var answer3 = $("<div><input type='radio' value=" + object[p].answer3 + ">" + object[p].answer3 + "</div>");
+      var answer3 = $("<div><input type='radio' data-answer=false value=" + object[p].answer3 + ">" + object[p].answer3 + "</div>");
       $(".questionaire").append(answer3);
     }
   }
 }
 
 $(".submit").click(function() {
-  alert ("All done? Great let's see how you did!");
-  checkAnswers();
+  stop();
+  var result = confirm("All done? Let's see how you did.");
+  if (result) {
+    checkAnswers();
+  }
 });
 
 /*HOW WE GONNA CHECK DEM ANSWERS?!?*/
 function checkAnswers() {
-  /*$("#myForm input[type=radio]").each(function() {
-      if(!isNaN(this.value)) {
-          alert(this.value + " is a valid number");
+  stop();
+  $(".questionaire input[type=radio]:checked").each(function() {
+      var answer = $(this).attr("data-answer");
+      if(answer === 'true') {
+        right++;
+      } else {
+        wrong++;
       }
   });
-  return false;*/
-  alert('Checking Answers dude!');
+  //return false;*/
+    //Logic to delete the item
+    $(".questionaire, .submit, #show-number, .instructions").css("display", "none");
+    $(".answerHead, .results").css("display", "block");
+    $(".right").text(right);
+    $(".wrong").text(wrong);
 }
 
 //Load Triva Questions
