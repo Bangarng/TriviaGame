@@ -16,6 +16,11 @@ main h1 {
     line-height: 25px;
 }
 
+/*game is hidden until start button is clicked*/
+.game {
+    display:none;
+}
+
 .header {
     background: url(../images/btmheader.gif);
     background-repeat: no-repeat;
@@ -62,10 +67,10 @@ header h1 {
 }
 
 .submit {
-    background-color: #386EB6;
+    background-color: #01B3FF;
     font-size: 4em;
     font-family: 'Architects Daughter', cursive;
-    color: #f8c81b;
+    color: #FFC52E;
     padding: 10px 20px 10px 20px;
     border: 5px solid #f8c81b;
     border-radius: 15px;
@@ -74,8 +79,29 @@ header h1 {
     box-shadow: 5px 5px #ccc;
 }
 
-.submit:hover {
+.startButton {
+    background-color: #01B3FF;
+    font-size: 3em;
+    font-family: 'Architects Daughter', cursive;
+    color: #FFC52E;
+    padding: 10px 20px 10px 20px;
+    border: 5px solid #f8c81b;
+    border-radius: 15px;
+    margin: 15px 0 90px 0;
+    transition: all .2s ease-in-out;
+    box-shadow: 5px 5px #ccc;
+}
+
+.submit:hover, .startButton:hover {
     transform: scale(1.05);
+}
+
+.submit:active, .startButton:active {
+    transform: scale(1.03);
+}
+
+.submit:focus, .startButton:focus {
+    outline:none;
 }
 
 .questionaire h1 {

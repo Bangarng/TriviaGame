@@ -26,13 +26,21 @@
         <h1>TRIVIA</h1>
     </header>   
     <main class="container content">
-        <h1 class="instructions"><u>Answer the questions before time runs out!</u><br>
-        If you've never heard of BTM, you can learn (and find all the answers) at <br> <a href="http://boloneytimemachine.com" target="_blank">Boloney Time Machine's website here.</a></h1>
-        <h1 class="answerHead"><u>Results!</u></h1>       
-        <div id="show-number"></div>
-        </br>
-        <section>
-        <form class="questionaire"></form>
+        <section class="startGame">
+            <h1 style="font-size:1.5em; padding-bottom:5px;"><u>HOW TO PLAY:</u></h1>
+            <h1 class="instructions">Answer the questions before time runs out!<br>
+            If you've never heard of BTM, you can learn (and find all the answers) at <br> <a href="http://boloneytimemachine.com" target="_blank">Boloney Time Machine's website here.</a></h1>
+            <button class="startButton">Click to Start!</button>
+        </section>
+
+        <div class="game">
+            <h1 class="instructions"><u>Answer the questions before time runs out!</u><br>
+            If you've never heard of BTM, you can learn (and find all the answers) at <br> <a href="http://boloneytimemachine.com" target="_blank">Boloney Time Machine's website here.</a></h1>
+            <h1 class="answerHead"><u>Results!</u></h1>       
+            <div id="show-number"></div>
+            </br>
+            <section>
+            <form class="questionaire"></form>
         <div class="results">
             <table class="container">
                 <thead>
@@ -48,11 +56,11 @@
             </table>
             <div class="score"></div>
         </div>
-
-        </section>
         <section>
             <button class="submit">Done</button>
         </section>
+        </div>
+
     </main>
 
     <!-- jQuery -->

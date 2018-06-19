@@ -83,6 +83,13 @@ var BTMTrivia = {
     answer3: "Clowns",
   }
 }
+
+$(".startButton").click(function() {
+    $(".startGame").css("display", "none");
+    $(".game").css("display", "block");
+    runTimer();
+});
+
 //Number Counter
 var number = 100;
 var intervalId;
@@ -139,8 +146,6 @@ function TrivaQuestions(object) {
 }
 
 //Make sure only one button is clicked per group;
-
-
 $(".submit").click(function() {
   stop();
   var result = confirm("All done? Let's see how you did.");
@@ -174,7 +179,7 @@ function checkAnswers() {
 //Load Triva Questions
 TrivaQuestions(BTMTrivia);
 //  Execute the run function.
-runTimer();
+
 
 
   
